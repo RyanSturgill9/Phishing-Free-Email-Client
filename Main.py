@@ -6,39 +6,34 @@ from flask import Flask, render_template
 ## Google requests (from google.auth.transport.requests import Requests)
 
 import os
-import base64
-import google.auth
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
+import pickle
 from google.auth.transport.requests import Request
-from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2.credentials import Credentials
 
-# If modifying these SCOPES, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 def authenticate_gmail():
     creds = None
-
-    # The file token.json stores the user's access and refresh tokens.
-    token_path = 'client_secret_96534092037-hedc84l2q4hnfs5ihmg06cntm7nea9op.apps.googleusercontent.com.json'
+    token_path = 'token.pickle'
 
     if os.path.exists(token_path):
-        creds = Credentials.from_authorized_user_file(token_path)
+        with open(token_path, 'rb') as token:
+            creds = pickle.load(token)
 
-    # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
-            creds = flow.run_local_server(port=0)
+            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
+            print(f"Authorization URL: {flow.authorization_url()}")
+            creds = flow.run_local_server(port=0, authorization_prompt_message='')
 
-        # Save the credentials for the next run
-        with open(token_path, 'w') as token:
-            token.write(creds.to_json())
+        with open(token_path, 'wb') as token:
+            pickle.dump(creds, token)
 
     return creds
+
 
 def list_messages(service, user_id='me', query=''):
     try:
