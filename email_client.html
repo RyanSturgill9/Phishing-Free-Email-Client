@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail API Email Client</title>
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+
+<h1>Gmail API Email Client</h1>
+
+<form id="credentials-form">
+    <label for="client-id">96534092037-aqgpu1bhjq3450jfjgektlqped7f9hcj.apps.googleusercontent.com:</label>
+    <input type="text" id="client-id" name="client-id" required>
+
+    <label for="api-key">AIzaSyBsLjScPa2L1j5jCrRR7NBh_-DF2EZmPmw:</label>
+    <input type="text" id="api-key" name="api-key" required>
+
+    <button type="button" onclick="handleAuthClick()">Authorize</button>
+</form>
+
+<p id="output"></p>
+
+<script>
+    // Constants
+    const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
+    const SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
+
+    // Function to handle authorization
+    function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+    }
+
+    function initClient() {
+        // Initialization code here (same as before)
+    }
+
+    function handleAuthClick() {
+        const clientId = document.getElementById('client-id').value;
+        const apiKey = document.getElementById('api-key').value;
+
+        gapi.client.init({
+            apiKey: apiKey,
+            clientId: clientId,
+            discoveryDocs: DISCOVERY_DOCS,
+            scope: SCOPES
+        }).then(function () {
+            // Handle authorization (same as before)
+            gapi.auth2.getAuthInstance().signIn();
+        });
+    }
+
+    // Function to list labels (same as before)
+</script>
+
+<script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+
+</body>
+</html>
