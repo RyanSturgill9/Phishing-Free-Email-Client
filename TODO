@@ -2,5 +2,3 @@ TODO:
     ☐ Add additional includes for the Google API in the .py file
     ☐ Build with Ryan's API credentials
     ☐ Need to account for a token.pickle file that is created based on information when the user grants permission to the application to access their Gmail account.
-    
-    
