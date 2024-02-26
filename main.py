@@ -1,9 +1,3 @@
-import flask
-from flask import Flask, render_template
-## need to add:
-## Google oauth2 (from google.oauth2.credentials import Credentials)
-## Google oauth library (from google_auth_oauthlib.flow imort InstalledAppFlow)
-## Google requests (from google.auth.transport.requests import Requests)
 
 import os
 import pickle
