@@ -1,43 +1,40 @@
-**About Phishing Free Email Client Project**
+About Phishing Free Email Client Project
 
 Welcome to the Phishing Free Email Client Project. Our email client is designed to empower users by enhancing their ability to identify suspicious emails independently, rather than relying solely on automated systems.
 
-### Purpose and Objectives
+Purpose and Objectives
 
 The Phishing Free Email Client Project aims to educate and equip users with the tools and knowledge needed to recognize phishing attempts and other email-based threats. Our objective is to create a more secure email environment by promoting user awareness and proactive defense mechanisms.
 
-### Background
+Background
 
 The increasing sophistication of phishing attacks has highlighted the limitations of automated email filters. Many users remain vulnerable to scams and malicious emails that slip through these systems. The Phishing Free Email Client Project was conceived to address this gap by focusing on user empowerment and education, providing them with the skills to identify threats manually.
 
-### Key Features and Functionality
+Key Features and Functionality
 
-- **Phishing Detection Tips:** In-app tips and guides on how to recognize common phishing tactics.
-- **Suspicious Email Alerts:** Alerts highlighting potentially suspicious emails based on user-defined criteria.
-- **Email Analysis Tools:** Tools for users to analyze email headers, links, and attachments for signs of phishing.
-- **Educational Resources:** Access to articles, tutorials, and quizzes on email security best practices.
-- **User-Friendly Interface:** An intuitive design that makes it easy for users to navigate and utilize security features.
+- Phishing Detection Tips: In-app tips and guides on how to recognize common phishing tactics.
+- Suspicious Email Alerts: Alerts highlighting potentially suspicious emails based on user-defined criteria.
+- Email Analysis Tools: Tools for users to analyze email headers, links, and attachments for signs of phishing.
+- Educational Resources: Access to articles, tutorials, and quizzes on email security best practices.
+- User-Friendly Interface: An intuitive design that makes it easy for users to navigate and utilize security features.
 
-### Target Audience
+Target Audience
 
 The Phishing Free Email Client is intended for all email users who want to enhance their ability to identify phishing attempts and other email threats. It is especially useful for individuals and small businesses who may not have access to advanced email security solutions.
 
-### Team and Contributors
+Creator
 
-Our dedicated team comprises cybersecurity experts, software developers, and educators committed to improving email security. Key contributors include:
-- **Alex Johnson:** Lead Cybersecurity Expert
-- **Maria Lee:** Senior Software Developer
-- **David Kim:** Educational Content Specialist
+Ryan Sturgill is the soal creator of this product. The original cause of creation was to compete in WASEF (Washington Science and Eneneering Fair). After winning first place there he decided to continue his development of the tool to the point where it was ready to be hosted on public servers like it is today.
 
-### Development Process
+Development Process
 
 The development of the Phishing Free Email Client Project follows an iterative process, incorporating user feedback to continuously improve features and functionality. Key milestones include the initial prototype release in January 2023 and the beta launch in June 2023.
 
-### Current Status and Future Plans
+Current Status and Future Plans
 
 The Phishing Free Email Client is currently in beta testing, with a full release planned for late 2024. We are working on additional features such as advanced threat analytics, user community forums for sharing tips, and integration with popular email services. Future updates will focus on refining the user experience and expanding our educational resources.
 
-### Contact Information
+Contact Information
 
 For more information, support, or to provide feedback, please contact us at support@phishingfreeclient.com or follow us on Twitter @PhishingFreeEC.
 
